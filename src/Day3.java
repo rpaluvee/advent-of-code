@@ -25,15 +25,15 @@ public class Day3 {
 
             boolean isFound = false;
             for (char leftChar : leftPart.toCharArray()) {
-                if (isFound) {
-                    break;
-                }
                 for (char rightChar : rightPart.toCharArray()) {
                     if (leftChar == rightChar) {
                         isFound = true;
-                        result += ITEMS.indexOf(leftChar) + 1;
                         break;
                     }
+                }
+                if (isFound) {
+                    result += ITEMS.indexOf(leftChar) + 1;
+                    break;
                 }
             }
         }
