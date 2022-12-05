@@ -18,7 +18,7 @@ public class Day4 {
 
     private static int calcPartOne(List<String> input) {
         int result = 0;
-        for(String line : input) {
+        for (String line : input) {
             String[] pair = line.split(",");
 
             int firstSectionMin = Integer.parseInt(pair[0].split("-")[0]);
@@ -42,7 +42,7 @@ public class Day4 {
 
     private static int calcPartTwo(List<String> input) {
         int result = 0;
-        for(String line : input) {
+        for (String line : input) {
             String[] pair = line.split(",");
 
             int firstSectionMin = Integer.parseInt(pair[0].split("-")[0]);
