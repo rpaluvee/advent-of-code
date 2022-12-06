@@ -11,7 +11,11 @@ public final class Utils {
     }
 
     public static List<String> readFileToList(String path) throws IOException {
-        return Files.readAllLines(new File(path).toPath(), Charset.defaultCharset() );
+        return Files.readAllLines(new File(path).toPath(), Charset.defaultCharset());
+    }
+
+    public static String readFileToString(String path) throws IOException {
+        return Files.readString(new File(path).toPath(), Charset.defaultCharset());
     }
 
 }
