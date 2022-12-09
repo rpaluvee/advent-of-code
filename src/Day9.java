@@ -71,7 +71,7 @@ public class Day9 {
             } else {
                 tail.x--;
             }
-        } else {
+        } else { // diagonal
             if (head.y > tail.y) {
                 if (head.x > tail.x) {
                     tail.x++;
@@ -127,7 +127,7 @@ public class Day9 {
                 return false;
             }
             final Position position = (Position) obj;
-            return position.x == this.x && position.y == this.y;
+            return position.x == x && position.y == y;
         }
 
         @Override
