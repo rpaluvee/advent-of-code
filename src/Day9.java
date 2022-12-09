@@ -23,7 +23,7 @@ public class Day9 {
         Set<Position> visitedPositionsPartOne = new HashSet<>();
         Set<Position> visitedPositionsPartTwo = new HashSet<>();
         visitedPositionsPartOne.add(tail.getPosition());
-        visitedPositionsPartTwo.add(new Position(0, 0));
+        visitedPositionsPartTwo.add(bigTail.get(bigTail.size() - 1));
 
         for (String line : input) {
             String direction = line.split(" ")[0];
