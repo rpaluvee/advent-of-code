@@ -27,9 +27,7 @@ const resolvePartOne = () => {
 const resolvePartTwo = () => {
   let result = 0;
   for (const line of INPUT_LIST) {
-    const blueValueList = [];
-    const greenValueList = [];
-    const redValueList = [];
+    const values = { blue: [], green: [], red: [] };
     for (const round of line.split(";")) {
       const regexPattern = /([0-9]+) ([red|green|blue]+)/g;
       const bag = { blue: 0, green: 0, red: 0 };
@@ -38,14 +36,13 @@ const resolvePartTwo = () => {
         const color = match[2];
         bag[color] += value;
       }
-      blueValueList.push(bag.blue);
-      greenValueList.push(bag.green);
-      redValueList.push(bag.red);
+      values.blue.push(bag.blue);
+      values.green.push(bag.green);
+      values.red.push(bag.red);
     }
-    const blueMax = Math.max(...blueValueList);
-    const greenMax = Math.max(...greenValueList);
-    const redMax = Math.max(...redValueList);
-    result += blueMax * greenMax * redMax;
+    const maxValues = ["blue", "green", "red"].map(color => 
+        Math.max(...values[color]));
+    result += maxValues.reduce((acc, curr) => acc * curr, 1);
   }
   return result;
 }
