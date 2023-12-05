@@ -12,7 +12,7 @@ const resolvePartOne = () =>
     const firstNum = String(nums[0]);
     const lastNum = String(nums[nums.length - 1]);
     const resultNum = Number.parseInt(firstNum + lastNum);
-    return sum += resultNum;
+    return sum + resultNum;
   }, 0);
 
 const resolvePartTwo = () =>
@@ -25,12 +25,12 @@ const resolvePartTwo = () =>
       return result;
     }, "");
     const nums = [...processedLine].reduce((result, i) =>
-        NUMBERS.includes(i) ? result += i : result,
+        NUMBERS.includes(i) ? result + i : result,
         "");
     const firstNum = String(nums[0]);
     const lastNum = String(nums[nums.length - 1]);
     const resultNum = Number.parseInt(firstNum + lastNum);
-    return sum += resultNum;
+    return sum + resultNum;
   }, 0);
 
 console.log(resolvePartOne());
