@@ -2,7 +2,7 @@ const { readFileToList } = require('./FileReader.js');
 
 const INPUT_LIST = readFileToList("../input/day6.txt");
 
-const resolveDayOne = () => {
+const resolvePartOne = () => {
   const times = INPUT_LIST[0].match(/Time:\s+([\w ]+)/)[1].split(/\s+/).map(e => Number(e));
   const distances = INPUT_LIST[1].match(/Distance:\s+([\w ]+)/)[1].split(/\s+/).map(e => Number(e));
 
@@ -22,7 +22,7 @@ const resolveDayOne = () => {
   return sums.reduce((acc, sum) => acc * sum, 1);
 }
 
-const resolveDayTwo = () => {
+const resolvePartTwo = () => {
   const time = Number(INPUT_LIST[0].match(/Time:\s+([\w ]+)/)[1].replaceAll(" ", ""));
   const distance = Number(INPUT_LIST[1].match(/Distance:\s+([\w ]+)/)[1].replaceAll(" ", ""));
 
@@ -36,5 +36,5 @@ const resolveDayTwo = () => {
   return sum;
 }
 
-console.log(resolveDayOne());
-console.log(resolveDayTwo());
+console.log(resolvePartOne());
+console.log(resolvePartTwo());
