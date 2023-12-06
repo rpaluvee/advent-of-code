@@ -6,8 +6,8 @@ const processSeed = (seed, maps) => {
   let patternBreakList = [];
   for (const map of maps) {
     for (let i = 0; i < map.range.length; i++) {
-      let destStart = map.destinationRangeStart[i];
-      let srcStart = map.sourceRangeStart[i];
+      const destStart = map.destinationRangeStart[i];
+      const srcStart = map.sourceRangeStart[i];
       const range = map.range[i];
 
       if (seed >= srcStart && seed <= srcStart + range - 1) {
