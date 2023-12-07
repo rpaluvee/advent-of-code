@@ -57,7 +57,7 @@ const processJoker = (map) => {
   // add "J" count to max value card
   let arr = Object.values(map);
   let max = Math.max(...arr);
-  let strongestCard = "2";
+  let strongestCard;
   Object.entries(map).forEach(([key, value]) => {
     if (value === max && cardStrength(key, CARDS_PART_2) > cardStrength(strongestCard, CARDS_PART_2)) {
       strongestCard = key;
